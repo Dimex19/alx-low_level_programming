@@ -1,28 +1,24 @@
 #include <stdio.h>
 /**
- * main - entry point
+ *main - print first 50 fibonacci
  *
- * Description: a program that prints the
- * first 50 fibonacci numbers.
- * Return: Always 0
+ *Return: 0 always.
  */
 int main(void)
 {
-	int i;
-	long int prev1, prev2, nextNum;
+	long int i, x = 1, y = 2, sum = 0, tSum = 0;
 
-	prev1 = 0;
-	prev2 = 1;
-	for (i = 0; i < 50; i++)
+	for (i = 0; i < 49; i++)
 	{
-		nextNum = prev1 + prev2;
-		if (i == 49)
-			printf("%lu", nextNum);
-		else
-			printf("%lu, ", nextNum);
-		prev1 = prev2;
-		prev2 = nextNum;
+		if ((y % 2 == 0) && (y <= 4000000))
+		{
+			tSum = tSum + y;
+		}
+		sum = x + y;
+		x = y;
+		y = sum;
+
 	}
-	printf("\n");
+	printf("%ld\n", tSum);
 	return (0);
 }
