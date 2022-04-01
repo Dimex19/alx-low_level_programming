@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 
 /**
@@ -16,7 +17,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			product = product * argv[i];
+			product = product * atoi(argv[i]);
 			printf("%s\n", product);
 		}
 	}
